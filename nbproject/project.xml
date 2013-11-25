@@ -8,6 +8,11 @@
             <properties/>
             <folders>
                 <source-folder>
+                    <label>view</label>
+                    <type>doc_root</type>
+                    <location>view</location>
+                </source-folder>
+                <source-folder>
                     <label>main</label>
                     <type>java</type>
                     <location>src/main</location>
@@ -21,11 +26,6 @@
                     <label>test</label>
                     <type>java</type>
                     <location>src/test</location>
-                </source-folder>
-                <source-folder>
-                    <label>view</label>
-                    <type>doc_root</type>
-                    <location>view</location>
                 </source-folder>
             </folders>
             <ide-actions>
@@ -57,6 +57,14 @@
             </ide-actions>
             <view>
                 <items>
+                    <source-folder style="tree">
+                        <label>view</label>
+                        <location>view</location>
+                    </source-folder>
+                    <source-folder style="tree">
+                        <label>resources</label>
+                        <location>resources</location>
+                    </source-folder>
                     <source-folder style="packages">
                         <label>main</label>
                         <location>src/main</location>
@@ -68,14 +76,6 @@
                     <source-folder style="packages">
                         <label>test</label>
                         <location>src/test</location>
-                    </source-folder>
-                    <source-folder style="tree">
-                        <label>view</label>
-                        <location>view</location>
-                    </source-folder>
-                    <source-folder style="tree">
-                        <label>resources</label>
-                        <location>resources</location>
                     </source-folder>
                     <source-file>
                         <location>build.xml</location>
@@ -96,7 +96,7 @@
         <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/2">
             <compilation-unit>
                 <package-root>src/main</package-root>
-                <classpath mode="compile">lib/hibernate-validator.jar:lib/hibernate-core.jar:lib/hibernate-annotations.jar:lib/hibernate-commons-annotations.jar:lib/hibernate-entitymanager.jar:lib/jboss-seam.jar:lib/jboss-seam-debug.jar:lib/jboss-cache.jar:lib/jbpm-jpdl.jar:lib/antlr.jar:lib/jgroups.jar:lib/jsf-facelets.jar:lib/jstl.jar:lib/jsf-api.jar:lib/servlet-api.jar:lib/jboss-el.jar:lib/el-api.jar:lib/mvel2.jar:lib/drools-api.jar:lib/drools-core.jar:lib/drools-compiler.jar:lib/drools-decisiontables.jar:lib/drools-templates.jar:lib/janino.jar:lib/antlr-runtime.jar:lib/mail.jar:lib/persistence-api.jar:lib/ejb-api.jar:lib/jsr250-api.jar:lib/jta.jar:lib/core.jar:lib/jboss-embedded-api.jar:lib/hibernate-search.jar:lib/richfaces-api.jar:lib/richfaces-ui.jar:lib/mysql-connector-java-5.1.27-bin.jar:lib/lucene-core.jar</classpath>
+                <classpath mode="compile">lib/hibernate-validator.jar:lib/hibernate-core.jar:lib/hibernate-annotations.jar:lib/hibernate-commons-annotations.jar:lib/hibernate-entitymanager.jar:lib/jboss-seam.jar:lib/jboss-seam-debug.jar:lib/jboss-cache.jar:lib/jbpm-jpdl.jar:lib/antlr.jar:lib/jgroups.jar:lib/jsf-facelets.jar:lib/jstl.jar:lib/jsf-api.jar:lib/servlet-api.jar:lib/jboss-el.jar:lib/el-api.jar:lib/mvel2.jar:lib/drools-api.jar:lib/drools-core.jar:lib/drools-compiler.jar:lib/drools-decisiontables.jar:lib/drools-templates.jar:lib/janino.jar:lib/antlr-runtime.jar:lib/mail.jar:lib/persistence-api.jar:lib/ejb-api.jar:lib/jsr250-api.jar:lib/jta.jar:lib/core.jar:lib/jboss-embedded-api.jar:lib/hibernate-search.jar:lib/richfaces-api.jar:lib/richfaces-ui.jar:lib/mysql-connector-java-5.1.27-bin.jar:lib/lucene-core.jar:lib/log4j.jar:/home/lokeshpkumar/Softwares/jboss-as-7.1.1.Final/modules/org/jboss/as/controller-client/main/jboss-as-controller-client-7.1.1.Final.jar:/home/lokeshpkumar/Softwares/jboss-as-7.1.1.Final/modules/org/jboss/dmr/main/jboss-dmr-1.1.1.Final.jar</classpath>
                 <source-level>1.5</source-level>
             </compilation-unit>
             <compilation-unit>

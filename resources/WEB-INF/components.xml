@@ -10,7 +10,8 @@
                  http://jboss.com/products/seam/security http://jboss.com/products/seam/security-2.2.xsd
                  http://jboss.com/products/seam/components http://jboss.com/products/seam/components-2.2.xsd">
 
-    <core:init jndi-pattern="@jndiPattern@" debug="true" distributable="@distributable@"/>
+    <!--<core:init jndi-pattern="@jndiPattern@" debug="true" distributable="@distributable@"/> -->
+    <core:init jndi-pattern="java:app/booking.jar/#{ejbName}" debug="true" distributable="false"/>
 
     <core:manager conversation-timeout="120000"
                   concurrent-request-timeout="500"
@@ -19,5 +20,8 @@
     <transaction:ejb-transaction/>
 
     <security:identity authenticate-method="#{authenticator.authenticate}"/>
+    
+    <component class="org.jboss.seam.transaction.EjbSynchronizations" jndi-name="java:app/jboss-seam/EjbSynchronizations"/>
+    <component class="org.jboss.seam.async.TimerServiceDispatcher" jndi-name="java:app/jboss-seam/TimerServiceDispatcher"/>
 
 </components>

@@ -3,11 +3,11 @@ package org.jboss.seam.example.booking;
 import static org.jboss.seam.ScopeType.SESSION;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import org.apache.log4j.Logger;
 
 import org.jboss.seam.annotations.In;
 import org.jboss.seam.annotations.Name;
@@ -26,7 +26,7 @@ public class AuthenticatorAction
     @Out(required=false, scope = SESSION)
     private User user;
     
-    private static final Logger log = Logger.getLogger(AuthenticatorAction.class.getSimpleName());
+    private static final Logger log = Logger.getLogger(AuthenticatorAction.class);
     
     @In
     private Identity identity;

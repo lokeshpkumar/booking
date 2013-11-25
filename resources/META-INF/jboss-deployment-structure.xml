@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
+  <deployment>
+      <dependencies>
+          <module name="javax.faces.api" slot="1.2" export="true"/>
+          <module name="org.apache.commons.logging" export="true"/>
+          <module name="com.sun.jsf-impl" slot="1.2" export="true"/>
+          <module name="org.dom4j" export="true"/>
+          <module name="org.apache.commons.collections" export="true"/>
+          <module name="com.mysql" export="true"/>
+          <module name="javax.transaction.api" export="true" />
+          <module name="org.jboss.as.controller-client" export="true"/>
+          <module name="org.jboss.dmr" export="true"/>
+        </dependencies>
+  </deployment>
+  <sub-deployment name="booking.war">
+    <exclusions>
+          <module name="javax.faces.api" slot="main"/>
+          <module name="com.sun.jsf-impl" slot="main"/>
+        </exclusions>
+        <dependencies>
+          <module name="javax.faces.api" slot="1.2"/>
+          <module name="com.sun.jsf-impl" slot="1.2"/>
+        </dependencies>
+  </sub-deployment>
+</jboss-deployment-structure>

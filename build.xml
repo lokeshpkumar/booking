@@ -254,6 +254,8 @@
         <copy todir="${ear.dir}/lib">
             <fileset dir="${lib.dir}">
                 <includesfile name="deployed-jars-ear.list"/>
+                <include name="hibernate-validator.jar" />
+                <include name="hibernate-core.jar" />
                 <exclude name="icefaces-ahs.jar" if="icefaces.present"/>
             </fileset>
         </copy>
@@ -261,6 +263,7 @@
             <fileset dir="${basedir}/resources/META-INF">
                 <include name="application.xml"/>
                 <include name="jboss-app.xml"/>
+                <include name="jboss-deployment-structure.xml"/>
             </fileset>
         </copy>
     </target>
