@@ -1,0 +1,26 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	    		xmlns:ui="http://java.sun.com/jsf/facelets"
+	  			xmlns:h="http://java.sun.com/jsf/html"
+	  			xmlns:f="http://java.sun.com/jsf/core"
+	  			xmlns:s="http://jboss.com/products/seam/taglib"
+                xmlns:a="http://richfaces.org/a4j"
+				template="template.xhtml">
+
+<!-- content -->
+<ui:define name="content">
+
+<div class="section">
+  
+    <span class="errors">
+       <h:messages id="messages" globalOnly="true"/>
+    </span>
+    
+    <h1>This is the Test page welcome Mr.#{identity.username}!!</h1>
+
+    
+</div>
+
+</ui:define>
+
+</ui:composition>
